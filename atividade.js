@@ -48,4 +48,18 @@ const produtos = [
 const nomesProdutos = produtos.map((produto) => produto.nome);
 console.log(nomesProdutos); // ["Caderno", "Caneta", "Mochila"]
 
-// 4.1
+// 4.1 Só os números pares
+const numerosLista = [1, 2, 3, 4, 5, 6];
+const pares = numerosLista.filter((n) => n % 2 === 0);
+console.log(pares); // [2, 4, 6]
+
+// 4.2 Só as notas aprovadas (7 ou mais)
+const notas = [5, 8, 6.5, 9, 7];
+const aprovadas = notas.filter((nota) => nota >= 7);
+console.log(aprovadas); // [8, 9, 7]
+
+// 4.3 Produtos com preço menor que 50, só os nomes
+const nomesBaratos = produtos
+  .filter((produto) => produto.preco < 50)
+  .map((produto) => produto.nome);
+console.log(nomesBaratos); // ["Caderno", "Caneta"]
